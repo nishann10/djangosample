@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">user's table</h1>
+    <table style="height:500px;width: 500px;margin: auto;"border="2">
+        <tr>
+            <th style="text-align: center;color: blue;"><h2>id</h2></th>
+            <th style="text-align: center;color: blue;"><h2>name</h2></th>
+            <th style="text-align: center;color: blue;"><h2>place</h2></th>
+            <th style="text-align: center;color: blue;"><h2>update</h2></th>
+            <th style="text-align: center;color: blue;"><h2>delete</h2></th>
+            
+        </tr>
+    {% for i in a %}
+    <tr>
+        <td style="text-align: center;">{{i.user_id}}</td>
+        <td style="text-align: center;">{{i.user_name}}</td>
+        <td style="text-align: center;">{{i.user_place}}</td>
+        <td style="text-align: center;"><a href="/userupdate/{{i.user_id}}">update</a></td>
+        <td style="text-align: center;"><a href="/userdelete/{{i.user_id}}">delete</a></td>
+        
+    </tr>
+    
+    {% endfor %}
+    </table>
+    <a href="{% url 'bb' %}">add user</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="fname">id :</label>
+        <input style="height: 30px;width: 200px;" type="text" id="fname" name="id"><br><br>
+        <label for="fname">name :</label>
+        <input style="height: 30px;width: 200px;" type="text" id="fname" name="name"><br><br> 
+        <label  for="lname">place :</label>
+        <input style="height: 30px;width: 200px;" type="text" id="lname" name="place" ><br><br>
+        <button style="height: 30px;width: 100px;" type="submit">submit</button>
+        </form>
+    
+</body>
+</html>
